@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CardController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MyOrdersController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,3 +16,10 @@ Route::get('/sepet',[CardController::class,'card'])->name('front.sepet');
 Route::get('/odeme',[CheckoutController::class,'index'])->name('front.odeme');
 Route::get('/siparislerim',[MyOrdersController::class,'index'])->name('front.siparislerim');
 Route::get('/siparislerim-detay',[MyOrdersController::class,'detail'])->name('front.siparislerim-detay');
+
+
+// prefix ön takma isim
+// aşağıda yazacağımız linkleri admin'in altında grupla
+Route::prefix("admin")->group(function (){
+   Route::get("/",[DashboardController::class,'index'])->name('admin.index');
+});
