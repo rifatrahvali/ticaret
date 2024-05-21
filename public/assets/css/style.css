@@ -1,0 +1,1063 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #2d3a4b;
+}
+
+body {
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.font-montserrat {
+    font-family: "Montserrat", sans-serif;
+}
+
+.font-playfair {
+    font-family: "Playfair", serif;
+}
+
+.text-orange {
+    color: #f38509;
+}
+
+.text-yellow {
+    color: #ffe115;
+}
+
+.bg-orange {
+    background-color: #f38509;
+}
+
+.bg-yellow {
+    background-color: #ffe115;
+}
+
+.fw-bold-600 {
+    font-weight: 600;
+}
+
+/* Top Bar ve Login */
+.top-bar {
+    /*background-color: #000;*/
+    height: 50px;
+}
+
+.top-bar .login li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.top-bar .login li a {
+    line-height: 50px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.user-basket .item-count {
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 11px;
+    line-height: 21px;
+}
+
+.top-bar .user-basket .dropdown-menu {
+    padding: 20px;
+    border: 0;
+    border-radius: 0;
+    min-width: 350px;
+    top: 12px !important;
+    right: 0 !important;
+    left: auto !important;
+    box-shadow: -1px 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.top-bar .basket-buttons a {
+    border-radius: 0 !important;
+}
+
+/* Sepetteki Scroll Bar */
+.overflow-custom {
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+/* Kaydırma çubuğunun stili için webkit öneki */
+.overflow-custom::-webkit-scrollbar {
+    width: 5px;
+    /* Kaydırma çubuğunun genişliği */
+}
+
+.overflow-custom::-webkit-scrollbar-thumb {
+    background-color: #f38509;
+    /* Kaydırma çubuğu başlığının rengi */
+    border-radius: 5px;
+    /* Kaydırma çubuğu başlığının köşe yuvarlanma yarıçapı */
+}
+
+/* HEADER - NAVBAR */
+header {
+    height: 130px;
+    padding: 30px;
+}
+
+.logo {
+    max-height: 70px;
+}
+
+header nav li.nav-item {
+    margin: 0 5px;
+    padding: 15px 0;
+}
+
+header nav li a.nav-link {
+    font-size: 14px !important;
+    font-weight: normal;
+    /*color: #2d3a4b;*/
+    text-transform: uppercase;
+    margin: 0 10px;
+    letter-spacing: 3px;
+
+    position: relative;
+    transition: all .3s linear;
+}
+
+header nav li a.nav-link:before {
+    width: 0;
+    margin: 0 auto;
+    position: absolute;
+    content: "";
+    height: 5px;
+    left: 0;
+    top: 45%;
+    z-index: -1;
+    background-color: #ffe115;
+    transition: 0.3s ease-in-out;
+}
+
+header nav li a.nav-link:hover:before {
+    width: 100%;
+}
+
+header nav li.active a.nav-link:before {
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    content: "";
+    height: 5px;
+    left: 0;
+    top: 45%;
+    z-index: -1;
+    background-color: #ffe115;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-right {
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+.nav-right i {
+    font-size: 20px;
+}
+
+.zoom:before {
+    transition: transform 1s ease;
+}
+
+.zoom:hover:before {
+    transform: scale(1.5);
+}
+
+/* Menu dropdown */
+.navbar-nav .dropdown {
+    position: unset;
+}
+
+.navbar-nav .dropdown .dropdown-menu {
+    width: 70%;
+    left: 15%;
+    padding: 30px;
+    top: 113px;
+    border-radius: 0;
+    border: none;
+}
+
+.dropdown-menu a.dropdown-link {
+    display: block;
+    font-size: 14px;
+}
+
+.dropdown-menu a.dropdown-link:hover {
+    color: #f38509;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-column {
+    border-right: 3px solid black;
+    padding-left: 35px;
+}
+
+.nav-brand-swiper img {
+    max-height: 190px;
+}
+
+/* Search */
+.search-inside {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0.8;
+    z-index: 500;
+}
+
+.search-inside .position-center-center {
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    padding: 0 20px;
+}
+
+.search-inside .search {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+}
+
+.search-inside .search input {
+    background-color: #fff;
+    font-size: 20px;
+    color: #333;
+    text-align: left;
+    height: 60px;
+    width: 100%;
+    border: none;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.search-inside .search input:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.search-inside .search button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 30px;
+    margin-top: 0;
+    background: none;
+    line-height: 60px;
+    height: 45px;
+    width: 45px;
+    border: none;
+}
+
+.search-inside .search-close {
+    position: absolute;
+    right: 50px;
+    top: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    /*color: #fff;*/
+}
+
+
+/* Slider */
+.slider {
+    height: 500px;
+    background-color: #f38509;
+}
+
+.slider,
+.swiper-container,
+.brand-swiper{
+    overflow-x: hidden;
+}
+
+/* slider içerisindeki slide */
+.slider .slide{
+    /* birden fazla elementleri yanyana getir */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+}
+.slider .slide img{
+    width: 100%;
+    height: 100%;
+    /* görsel container'a sığdırır ve ortasını merkezle  */
+    object-fit: cover;
+}
+
+.home-swiper .swiper-button-prev,
+.home-swiper .swiper-button-next{
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    color: white;
+    transition: background-color .4s ease;
+}
+
+.home-swiper .swiper-button-prev:hover,
+.home-swiper .swiper-button-next:hover{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    color: black;
+    transition: background-color .4s ease;
+}
+
+.slider-title{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-title h3{
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.slider-title h2{
+    font-size: 75px;
+    font-weight: 600;
+    text-align: center;
+    color: white;
+}
+
+.slider-title a{
+    /* köşelerini sıfırlayalım */
+    border-radius: 0; 
+    font-size: 20px;
+    padding: 15px 100px;
+    border: 3px solid black;
+}
+
+.title-wrapper{
+    display: flex;
+    /* swipper'ı flex yapısı ile kullan */
+    flex-direction: column;
+    /* öğeleri dikey hizalar */
+    justify-content: center;
+    /* içeriği yatayda hizalar*/
+    align-items: center;
+    /* içeriği dikeyde hizalar*/
+}
+
+/* markalar slider'ı - feature-brands */
+
+.feature-brands h3{
+    letter-spacing: 3px;
+    font-weight: 600px;
+    text-transform: uppercase;
+}
+
+.feature-brands .brand-swiper{
+    height: 100px;
+    line-height: 100px;
+}
+
+.feature-brands .brand-slider{
+    transition: filter 0.3s, background-color 0.3s; /*mouse üzerinden gittiğinde*/
+    background-color: white;
+}
+.feature-brands .brand-slider:hover{
+    cursor: pointer;
+    background-color:#ffe115;
+    transition: filter 0.3s, background-color 0.3s; /*mouse üzerine geldiğinde*/
+}
+
+.feature-brands .brand-slider:hover img{
+    filter: brightness(0) invert(1);
+    
+}
+
+.feature-brands .swiper-button-next,
+.feature-brands .swiper-button-prev,
+.feature-season-products .swiper-button-next,
+.feature-season-products .swiper-button-prev{
+    top: 14px;
+    bottom: auto;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+
+.feature-brands .swiper-button-next:after,
+.feature-brands .swiper-button-prev:after,
+.feature-season-products .swiper-button-next:after,
+.feature-season-products .swiper-button-prev:after{
+    font-size: 25px;
+    color: black;
+}
+
+.feature-brands .swiper-button-next:hover,
+.feature-brands .swiper-button-prev:hover,
+.feature-season-products .swiper-button-next:hover,
+.feature-season-products .swiper-button-prev:hover{
+    border-radius: 0;
+    border: 3px solid black;
+}
+
+.feature-brands .swiper-button-next,
+.feature-season-products .swiper-button-next{
+    right: 25px;
+    left: auto;
+}
+.feature-brands .swiper-button-prev,
+.feature-season-products .swiper-button-prev{
+    right: 60px;
+    left: auto;
+}
+
+/* product home banner */
+.feature-product-banner .banner{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+}
+
+.feature-product-banner .banner img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    object-fit: cover;
+}
+
+/* Sezonun Marka ürünleri */
+.feature-season-products{
+    background-color: #f38509;
+}
+
+.wrapper-product .product-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrapper-product .product-tag {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    font-size: 10px;
+    letter-spacing: 0.04em;
+}
+
+.wrapper-product .favorite,
+.wrapper-product .un-favorite {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.wrapper-product .product-brand {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 12px;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
+    padding-bottom: 2px;
+    letter-spacing: 1px;
+    background-color: rgb(245 151 60 / 21%);;
+}
+
+.wrapper-product .product-info .product-title {
+    font-size: 19px;
+    margin-bottom: 0;
+}
+
+.wrapper-product .product-info .product-description {
+    font-size: 14px;
+}
+
+.wrapper-product .product-info .product-price {
+    font-weight: 500;
+    font-size: 14px;
+}
+footer {
+    background-color: #171e27;
+    padding: 90px 0;
+}
+
+footer h6 {
+    letter-spacing: 0.2em;
+    margin-bottom: 40px;
+}
+
+footer ul {
+    padding-left: 0;
+}
+
+footer li a {
+    font-size: 12px;
+    color: #999;
+    line-height: 26px;
+    display: inline-block;
+}
+
+footer li a:hover {
+    color: #fff;
+}
+
+/* product-list sayfasındaki main */
+/* product-filter sol taraf kategori ve filtreleme bölümü */
+
+main{
+    padding: 30px;
+}
+
+.sortby{
+    border: unset;
+    padding-right: 5px;
+    font-size: 14px;
+}
+
+.product-list-info .product-count{
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.product-filter{
+    max-width: calc(100vh-240px);
+    overflow: hidden scroll;
+    position: sticky;
+    top: 0;
+}
+.product-filter .filter-item-wrapper{
+    position: relative;
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+}
+
+.product-filter .filter-title{
+    font-size: 14px;
+}
+.product-filter .filter-detail{
+    max-height: 100px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.filter-item input[type=checkbox]{
+    min-width: 15px;
+    min-height: 15px;
+    border-radius: 0;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.filter-item input[type=checkbox]:checked{
+    background-color: #f38509;
+}
+.filter-item input[type=checkbox]:focus{
+    outline: none;
+    box-shadow: none;
+}
+.filter-item label{
+    font-size: 13px;
+}
+.filter-price input{
+    outline: none;
+    box-shadow: none;
+    font-size: 11px;
+    border: 1px solid black;  
+}
+.filter-price input::placeholder{
+    color: black;
+    font-size: 10px;
+}
+.filter-price input:focus{
+    box-shadow: none;
+    border: 1px solid #f38509;
+}
+.filter-price button{
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    color:black;
+    border: none;
+}
+.filter-price button:hover{
+    color:#f38509;
+}
+
+.filter-price > *{
+    padding-left: 12px;
+    padding-right: 3px;
+}
+
+/* pagination */
+.pagination li.active a,
+.pagination li a:hover{
+    background-color:#f38509;
+    color: black;
+}
+.pagination li a{
+    background-color: #2d3a4b;
+    color: white;
+    margin: 0 2px;
+    height: 25px;
+    line-height: 25px;
+    width: 25px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    float: left;
+}
+
+/* product detail sayfası stilleri */
+.product-image-wrapper .swiper-button-prev{
+    left:0;
+}
+.product-image-wrapper .swiper-button-next{
+    right:0;
+}
+
+.product-image-wrapper .swiper-button-prev:after,
+.product-image-wrapper .swiper-button-next:after{
+    font-size: 25px;
+    color: #f38509;
+}
+
+.big-slider{
+    position: relative;
+    overflow-y: hidden;
+    padding: 0 50px;
+}
+.thumb-sliders{
+    min-height: 200px;
+}
+.thumb-sliders-buttons{
+    font-size: 25px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.thumb-sliders-buttons span:hover{
+    color: #f38509;
+}
+.thumb-image,
+.big-image img{
+    width: 100%;
+}
+
+/* sağ taraf - ürün açıklama tarafı */
+.product-detail{
+
+}
+
+.product-detail h4{
+    letter-spacing: 2px;
+}
+.product-detail h6{
+    letter-spacing: 1px;
+}
+
+.product-detail hr{
+    border-top: 2px solid black;
+}
+.price{
+    letter-spacing: 1px;
+}
+
+.discount-rate{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #f38509;
+    height: 75px;
+    width: 75px;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    line-height: 30px;
+    font-size: 18px;
+    border-radius: 0;
+}
+
+.discount-rate span{
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.product-detail .product-short-description{
+    line-height: 25px;
+    letter-spacing: 0.05em;
+}
+
+.shopping .bi-heart{
+    font-size: 30px;
+    line-height: 50px;
+    cursor: pointer;
+}
+
+.piece-wrapper .input-group{
+    border: 1px solid #f38509;
+    border-radius: 0;
+}
+
+.piece-wrapper .input-group span{
+    height: 50px;
+    width: 33%;
+    text-align: center;
+    line-height: 50px;
+    position: relative;
+    font-size: 25px;
+    color: #f38509;
+    cursor: pointer;
+}
+.piece-wrapper input{
+    background-color: white;
+    max-width: 33%;
+    text-align: center;
+    color: black;
+    border: none;
+}
+
+.piece-wrapper .input-group span.piece-increase:before{
+    left:0;
+    right: auto;
+}
+.piece-wrapper .input-group span.piece-decrease:before,
+.piece-wrapper .input-group span.piece-increase:before{
+    position: absolute;
+    width: 1px;
+    height: 22px;
+    background-color: #f38509;
+    top: 50%;
+    right: 0;
+    content: "";
+    margin-top: -10px;
+}
+
+.shopping select{
+    height: 50px;
+    border: 1px solid #f38509;
+    color: black;
+}
+.shopping select:focus{
+    border-color:#f38509;
+    outline: 0;
+    box-shadow: none;
+}
+.add-to-card{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0;  
+}
+.add-to-card:hover{
+    background-color: #d28e40;
+}
+.accordion-item{
+    border-color: #f38509;
+}
+.accordion-button:focus{
+    border-color: #f38509;
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed){
+    border-color: #f38509;
+    color: white;
+}
+
+/* Cart Sayfası */
+
+.cart-page table td img{
+    width: 100px;
+
+}
+.cart-pagetable td{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.cart-page table div{
+    font-size: 11px;
+}
+.cart-page table td{
+    vertical-align: middle;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+.my-orders .cart-page table td img{
+    width: 100px;
+
+}
+.my-orders .cart-pagetable td{
+    font-weight: 300;
+    font-size: 12px;
+}
+
+.my-orders .cart-page table div{
+    font-size: 11px;
+}
+.my-orders .cart-page table td{
+    vertical-align: middle;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+.cart-page table tbody,
+.cart-page table td,
+.cart-page table tfoot,
+.cart-page table th,
+.cart-page table thead,
+.cart-page table tr {
+    border-color: #d28e40;
+}
+
+
+.my-orders .cart-page table tbody,
+.my-orders .cart-page table td,
+.my-orders .cart-page table tfoot,
+.my-orders .cart-page table th,
+.my-orders .cart-page table thead,
+.my-orders .cart-page table tr {
+    border-color: #d28e40;
+}
+
+
+.cart-page .piece-wrapper .input-group{
+    width: 150px;
+}
+
+.cart-page table .piece-wrapper .input-group span{
+    height: unset;
+    line-height: unset;
+}
+
+/* cart basket detail */
+
+.btn-approve-basket{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    padding: 0;
+}
+
+.btn-approve-basket:hover{
+    background-color: #d28e40;
+    color: white;
+}
+.basket-detail{
+    height: 100%;
+    background-color: #f7f7f7;
+    position: sticky;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.grand-total{
+    border: 1px solid #f38509;
+    padding: 30px;
+}
+.grand-total p{
+    font-size: 12px;
+    border-bottom: 1px solid black;
+}
+.grand-total p:last-child{
+    border-bottom: unset;
+    font-size: 14px;
+}
+.grand-total i{
+    cursor: pointer;
+}
+.grand-total i:hover{
+    color: #f38509;
+}
+
+.discount-wrapper{
+    border: 1px solid #f38509;
+    padding: 20px 10px;
+    border-radius: 0;
+}
+
+.discount-wrapper h5{
+    color: #f38509;
+}
+
+.discount-wrapper input{
+    height: 40px;
+    font-size: 12px;
+
+}
+.discount-wrapper input:focus{
+    border-color: #f38509;
+    box-shadow: none;
+}
+.discount-wrapper button{
+    font-size: 12px;
+    height: 40px;
+}
+
+/* checkout sayfası */
+
+.order-detail-wrapper h6{
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.order-detail-wrapper h6:before{
+    width: 90px;
+    height: 2px;
+    background-color: #2d3a4b;
+    border: none;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    margin-top: 30px;
+}
+.order-detail-wrapper label{
+    width: 100%;
+    font-size: 12px;
+}
+.order-detail-wrapper input,
+.order-detail-wrapper select,
+.order-detail-wrapper textarea{
+    border: 1px solid #f38509;
+    height: 45px;
+    float: left;
+    width: 100%;
+    font-size: 11px;
+    padding: 0 10px;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 0;
+}
+.order-detail-wrapper textarea{
+    height: inherit;
+    resize: none;
+}
+
+.order-detail-wrapper .nav-tabs .nav-link{
+    position: relative;
+    padding-bottom:10px;
+    border: unset;
+    color: inherit;
+    font-size: 12px;
+}
+.order-detail-wrapper .nav-tabs .nav-link::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3;
+    background-color: #f38509;
+    transition: width 0.3s ease;
+}
+
+.order-detail-wrapper .nav-tabs .nav-link.active::after{
+    width: 100%;
+}
+.order-detail-wrapper .nav-tabs .nav-link:focus,
+.order-detail-wrapper .nav-tabs .nav-link:hover{
+    border-color: unset;
+}
+.contract{
+    display: flex;
+    border: 1px solid #f38509;
+    border-radius: 0;
+    font-size: 11px;
+}
+.contract label{
+    margin: 5px 10px;
+}
+.contract a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+.contract input{
+    width: 20px;
+    height: 20px;
+}
+
+/* contract modal */
+.text-wrapper h1,
+.text-wrapper h2,
+.text-wrapper h3,
+.text-wrapper h4,
+.text-wrapper h5,
+.text-wrapper h6{
+    font-size: 12px;
+}
+
+.contracts-text-wrapper{
+    max-height: 150px;
+    overflow-y: scroll;
+    padding: 30px 0;
+    background-color: #fafafa;
+}
+.btn-contracts-approve:hover{
+    background-color: #d28e40;
+    color: black !important;
+}
+
+/* detaylar */
+
+.s-amount div{
+    font-size: 12px;
+}
+
+.my-orders table td{
+    vertical-align: middle;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.my-orders img{
+    width: 100px;
+}
+
+.my-orders .card,
+.my-orders .card-header{
+    border-color: #f38509;
+}
+.my-orders .card-header{
+    background-color: #f38509;
+}
+.my-orders .grand-total{
+    padding: 0;
+}
