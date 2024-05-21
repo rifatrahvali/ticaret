@@ -6,6 +6,8 @@ use App\Http\Controllers\CardController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MyOrdersController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -17,6 +19,10 @@ Route::get('/odeme',[CheckoutController::class,'index'])->name('front.odeme');
 Route::get('/siparislerim',[MyOrdersController::class,'index'])->name('front.siparislerim');
 Route::get('/siparislerim-detay',[MyOrdersController::class,'detail'])->name('front.siparislerim-detay');
 
+Route::get("kayit-ol",[RegisterController::class,'showForm'])->name('register');
+Route::post("kayit-ol",[RegisterController::class,'register']);
+Route::get("giris",[LoginController::class,'showFrom'])->name('login');
+Route::post("giris",[LoginController::class,'login']);
 
 // prefix ön takma isim
 // aşağıda yazacağımız linkleri admin'in altında grupla
