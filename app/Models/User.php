@@ -10,6 +10,7 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use HasFactory, Notifiable;
+    // Notifiable : hangi model treadi varsa onla gönderebiliriz.
 
     /**
      * The attributes that are mass assignable.
