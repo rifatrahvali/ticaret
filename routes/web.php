@@ -30,6 +30,7 @@ Route::middleware('throttle:registration')->group(function (){
     Route::post("kayit-ol",[RegisterController::class,'register']);
 });
 
+Route::get('/dogrula/{token}',[RegisterController::class,'verify'])->name('verify');
 
 //->middleware('throttle:registration'); throttle ile birlikle verirsek bizim oluşturduğumuz limitserviceprovider'ı beraber kullanırız.
 // LOGIN
