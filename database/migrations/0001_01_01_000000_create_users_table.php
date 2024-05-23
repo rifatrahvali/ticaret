@@ -11,22 +11,29 @@ return new class extends Migration
      */
     public function up(): void
     {
+        # ADIM 1 :USERS TABLOSU OLUŞTURULUYOR
         Schema::create('users', function (Blueprint $table) {
+            #
             $table->id();
+            # ad - string - boş geçilemez
             $table->string('name');
+            # mail - string - mail türü - benzersiz - boş geçilemez
             $table->string('email')->unique();
+            # boş geçilebilir
             $table->timestamp('email_verified_at')->nullable();
+
             $table->string('password');
+            # string - 100 karakter uzun alan - boş geçilebilir. - beni hatırla butonu
             $table->rememberToken();
             $table->timestamps();
         });
-
+        # ADIM 2 : PAROLA SIFIRLAMA TABLOSU OLUŞTURULUYOR
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');
             $table->timestamp('created_at')->nullable();
         });
-
+        # ADIM 3 :OTURUMLARIN TUTULDUĞU TABLODUR.
         Schema::create('sessions', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->foreignId('user_id')->nullable()->index();

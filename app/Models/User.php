@@ -44,4 +44,6 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+    // frontendde göstermek istediğimnizde kullanılır
+    // örneğin mail doğrulama verisini - tarihe çevirir
 }
