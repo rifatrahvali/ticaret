@@ -40,6 +40,13 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        /*
+         * 'api'=>[
+            'driver' => 'passport',
+            'provider' => 'users',
+            // provvider hangi model -> tabloyu kullanacaksa onu baz alır
+        ]
+         * */
     ],
 
     /*
@@ -90,6 +97,9 @@ return [
     |
     */
 
+    // prolaların nasıl tutulacağı kısmı
+    // users providerinın  bilgileri
+    // gemini'a soracağız
     'passwords' => [
         'users' => [
             'provider' => 'users',
@@ -110,6 +120,7 @@ return [
     |
     */
 
+    // parolaların ne kadar süreyle geçerli olacağı
     'password_timeout' => env('AUTH_PASSWORD_TIMEOUT', 10800),
 
 ];

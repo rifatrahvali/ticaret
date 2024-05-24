@@ -25,9 +25,14 @@
         @include("layouts.admin.footer")
     </div>
 </div>
+
 <script src="{{ asset("assets/vendors/core/core.js") }}"></script>
 <script src="{{ asset("assets/vendors/feather-icons/feather.min.js") }}"></script>
 <script src="{{ asset("assets/js/template.js") }}"></script>
+<script>
+    feather.replace();
+</script>
+@include('sweetalert::alert')
 @stack("js")
 </body>
 </html>

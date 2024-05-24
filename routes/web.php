@@ -40,6 +40,7 @@ Route::post("giris",[LoginController::class,'login']);
 
 // ADMIN
 // prefix ön takma isim aşağıda yazacağımız linkleri admin'in altında grupla
-Route::prefix("admin")->group(function (){
-   Route::get("/",[DashboardController::class,'index'])->name('admin.index');
+//
+Route::prefix("admin")->name("admin.")->middleware("auth")->group(function (){
+   Route::get("/",[DashboardController::class,'index'])->name('index');
 });
