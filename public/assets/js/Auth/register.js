@@ -342,10 +342,8 @@ document.addEventListener('DOMContentLoaded',function () {
 
     // btnRegister'a tıklandığında
     btnRegister.addEventListener("click",function () {
-        registerFrom.submit();
-
-        /*
-
+        //registerFrom.submit();
+        
         ruleName:
         for (const rule in validationRules){
 
@@ -388,7 +386,7 @@ document.addEventListener('DOMContentLoaded',function () {
         }
 
 
-         */
+
     });
 
     function validateEmail(email){

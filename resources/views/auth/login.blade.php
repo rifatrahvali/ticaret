@@ -1,14 +1,15 @@
 @extends("layouts.auth.auth")
-@section("title","KAYIT")
+@section("title","GİRİŞ")
 @push("css") @endpush
 @section("body")
     <div class="auth-form-wrapper px-4 py-5">
         <a href="#" class="noble-ui-logo d-block mb-2">Ticaret<span>APP</span></a>
         <h5 class="text-muted fw-normal mb-4">Giriş Ekranı</h5>
-        <form class="forms-sample" action="{{ route('login') }}" METHOD="POST">
+        <form class="forms-sample" action="{{ route('login') }}" METHOD="POST" id="loginForm">
+            @csrf
             <div class="mb-3">
                 <label for="email" class="form-label">E-mail</label>
-                <input type="email" class="form-control" id="email" placeholder="E-mail" name="email">
+                <input type="email" class="form-control" id="email" placeholder="E-mail" name="email" value="{{ old('email') }}">
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Parola</label>
@@ -21,14 +22,15 @@
                 </label>
             </div>
             <div>
-                <a href="javascript:void(0)" class="btn btn-primary text-white me-2 mb-2 mb-md-0" id="Login">Giriş</a>
+                <a href="javascript:void(0)" class="btn btn-primary text-white me-2 mb-2 mb-md-0" id="btnLogin">Giriş</a>
                 <button type="button" class="btn btn-outline-primary btn-icon-text mb-2 mb-md-0">
-                    <i class="mdi mdi-google"></i>
-                    Google Hesabı ile Giriş
+                    <i class="mdi mdi-google"></i> Google Hesabı ile Giriş
                 </button>
             </div>
             <a href="{{ route('register') }}" class="d-block mt-3 text-muted">Hesabınız yok mu? Kayıt ol sayfası.</a>
         </form>
     </div>
 @endsection
-@push("js") @endpush
+@push("js")
+    <script src="{{ asset('assets/js/auth/login.js') }}"></script>
+@endpush

@@ -76,6 +76,7 @@
                     </div>
                 </div>
             </li>
+            <!-- Kullanıcı açılır menü -->
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img class="wd-30 ht-30 rounded-circle" src="https://via.placeholder.com/30x30" alt="profile">
@@ -92,28 +93,25 @@
                     </div>
                     <ul class="list-unstyled p-1">
                         <li class="dropdown-item py-2">
-                            <a href="../../pages/general/profile.html" class="text-body ms-0">
+                            <a href="#" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="user"></i>
                                 <span>Profil</span>
                             </a>
                         </li>
                         <li class="dropdown-item py-2">
-                            <a href="javascript:;" class="text-body ms-0">
+                            <a href="#" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="edit"></i>
                                 <span>Profili Düzenle</span>
                             </a>
                         </li>
                         <li class="dropdown-item py-2">
-                            <a href="javascript:;" class="text-body ms-0">
-                                <i class="me-2 icon-md" data-feather="repeat"></i>
-                                <span>Kullanıcı Değiştir</span>
-                            </a>
-                        </li>
-                        <li class="dropdown-item py-2">
-                            <a href="javascript:;" class="text-body ms-0">
+                            <a href="javascript:;" onclick="event.preventDefault(); document.getElementById('logoutForm').submit()" class="text-body ms-0">
                                 <i class="me-2 icon-md" data-feather="log-out"></i>
                                 <span>Log Out</span>
                             </a>
+                            <form action="{{ route('logout') }}" id="logoutForm" method="post">
+                                @csrf
+                            </form>
                         </li>
                     </ul>
                 </div>
